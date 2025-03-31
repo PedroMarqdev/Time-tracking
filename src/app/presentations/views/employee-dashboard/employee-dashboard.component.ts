@@ -19,7 +19,7 @@ import {TimeTrackingService} from '@services/time-tracking.service';
 export class EmployeeDashboardComponent implements OnInit, OnDestroy {
   employees: Employee[] = [];
   timeTrackingRecords: TimeTracking[] = [];
-  employeeForm: FormGroup;
+  protected employeeForm: FormGroup;
   editMode = false;
   selectedEmployee: Employee | null = null;
   viewingEmployee: Employee | null = null;

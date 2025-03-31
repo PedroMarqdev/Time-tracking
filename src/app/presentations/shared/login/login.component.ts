@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormBuilder, FormGroup, Validators, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {faUser, faLock, faClock, faSignIn} from '@fortawesome/free-solid-svg-icons';
+import {faUser, faLock } from '@fortawesome/free-solid-svg-icons';
 import {Router} from '@angular/router';
 import {RouteEnum} from '@core/enums/route.enum';
 import {AuthService} from '@services/auth.service';
@@ -15,7 +15,7 @@ import {AuthService} from '@services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  loginForm: FormGroup;
+  protected loginForm: FormGroup;
   currentTime: Date = new Date();
   errorMessage: string = '';
 

@@ -1,7 +1,7 @@
 import {interval, Subscription} from 'rxjs';
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CommonModule, registerLocaleData} from '@angular/common';
-import {FormBuilder, FormGroup, ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule} from '@angular/forms';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {faClock, faSignIn, faUser} from '@fortawesome/free-solid-svg-icons';
 import localePt from '@angular/common/locales/pt';

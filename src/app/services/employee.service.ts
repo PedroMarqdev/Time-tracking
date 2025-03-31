@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import {Employee} from '@models/employee.model';
-import {TimeTrackingService} from '@services/time-tracking.service';
 
 @Injectable({
   providedIn: 'root'
