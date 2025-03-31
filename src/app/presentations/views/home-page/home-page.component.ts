@@ -3,7 +3,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CommonModule, registerLocaleData} from '@angular/common';
 import { ReactiveFormsModule} from '@angular/forms';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {faClock, faSignIn, faUser} from '@fortawesome/free-solid-svg-icons';
+import {faClock, faSignIn } from '@fortawesome/free-solid-svg-icons';
 import localePt from '@angular/common/locales/pt';
 import {TimeTrackingFormComponent} from '../../shared/time-tracking-form/time-tracking-form.component';
 import {LoginComponent} from '../../shared/login/login.component';
