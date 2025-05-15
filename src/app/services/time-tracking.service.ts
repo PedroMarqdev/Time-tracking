@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TimeTracking } from '@models/time-tracking.model';
 import { EmployeeService } from './employee.service';
+import {formatBrazilianDate} from '../utils/DateUtils';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class TimeTrackingService {
     if (data) {
       const parsedData: TimeTracking[] = JSON.parse(data, (key, value) => {
         if (key === 'startTime' || key === 'endTime' || key === 'date') {
-          return value ? new Date(value) : null;
+          return value ? formatBrazilianDate(new Date(value)) : null;
         }
         return value;
       });
@@ -67,9 +68,9 @@ export class TimeTrackingService {
     const newRecord: TimeTracking = {
       id: this.generateId(),
       employeeId,
-      startTime: new Date(),
+      startTime: formatBrazilianDate(),
       endTime: null,
-      date: new Date()
+      date: formatBrazilianDate()
     };
 
     this.timeTrackingRecords.next([...records, newRecord]);
@@ -89,7 +90,7 @@ export class TimeTrackingService {
     const updatedRecords = [...records];
     updatedRecords[index] = {
       ...updatedRecords[index],
-      endTime: new Date()
+      endTime: formatBrazilianDate()
     };
 
     this.timeTrackingRecords.next(updatedRecords);
