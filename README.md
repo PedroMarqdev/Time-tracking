@@ -64,6 +64,3 @@ Para acessar as funções de administração:
   - Horário de entrada (HH:MM)
   - Horário de saída (HH:MM)
   - Duração total trabalhada (HH:MM)
-4. É possível filtrar os registros por:
-  - Período (data inicial e final)
-  - Status (completo/incompleto)
